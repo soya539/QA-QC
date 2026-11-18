@@ -1,0 +1,20 @@
+{
+  "name": "qa-qc-lab5-unit-integration-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Лабораторна №5: Jest + реальний To-Do застосунок з ЛР №1",
+  "scripts": {
+    "test": "jest --runInBand",
+    "test:examples": "jest tests/examples --runInBand --verbose",
+    "test:todo": "jest tests/todo --runInBand --verbose",
+    "test:verbose": "jest --runInBand --verbose"
+  },
+  "devDependencies": {
+    "@testomatio/reporter": "^2.24.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
+}
