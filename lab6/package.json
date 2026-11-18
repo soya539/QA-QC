@@ -1,0 +1,22 @@
+{
+  "name": "lab6-e2e-screenshot-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QA/QC Lab 6 — E2E and screenshot tests (variant 7)",
+  "scripts": {
+    "start": "http-server public -p 3000 -a 127.0.0.1 -c-1",
+    "test": "playwright test",
+    "test:e2e": "playwright test tests/e2e",
+    "test:visual": "playwright test tests/screenshots",
+    "test:headed": "playwright test tests/e2e/local.test.js --project=chromium --headed --workers=1",
+    "test:report": "playwright show-report",
+    "snapshots:update": "playwright test tests/screenshots --update-snapshots",
+    "demo:break-e2e": "node scripts/demo-change.js e2e",
+    "demo:break-visual": "node scripts/demo-change.js visual",
+    "demo:restore": "node scripts/demo-change.js restore"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "http-server": "^14.1.1"
+  }
+}

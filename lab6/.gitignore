@@ -1,0 +1,7 @@
+node_modules/
+playwright-report/
+test-results/
+.lab6-backup/
+.env
+.env.*
+.DS_Store

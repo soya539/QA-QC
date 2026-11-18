@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Локальна сторінка</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <p class="eyebrow">Навчальний застосунок · QA/QC</p>
+    <h1>Вітаємо на локальній сторінці</h1>
+    <p class="lead">Демонстраційна форма входу для браузерного тестування.</p>
+    <form id="loginForm">
+      <label for="username">Ім'я користувача</label>
+      <input id="username" name="username" type="text" placeholder="test_user" required>
+      <label for="password">Пароль</label>
+      <input id="password" name="password" type="password" placeholder="********" required>
+      <button id="loginButton" type="submit">Увійти</button>
+    </form>
+    <p id="successMessage" class="success" hidden>Успішний вхід!</p>
+    <p class="footer-link"><a id="aboutLink" href="/about.html">Про проєкт</a></p>
+  </main>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      document.getElementById('successMessage').hidden = false;
+    });
+  </script>
+</body>
+</html>
